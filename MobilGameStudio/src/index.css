@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-studio-light text-studio-ink antialiased transition-colors duration-300;
+  }
+
+  body.dark {
+    @apply bg-studio-night text-studio-glow;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+
+  .container-narrow {
+    @apply mx-auto max-w-7xl;
+  }
+
+  .games-carousel {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x mandatory;
+  }
+
+  .games-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .game-card-depth {
+    transform-origin: center bottom;
+    transition:
+      transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      opacity 0.45s ease,
+      filter 0.45s ease;
+    will-change: transform, opacity;
+  }
+
+  .about-icon-fill {
+    clip-path: inset(100% 0 0 0);
+    transition: clip-path 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .about-value-card:hover .about-icon-fill {
+    clip-path: inset(0 0 0 0);
+  }
+}
