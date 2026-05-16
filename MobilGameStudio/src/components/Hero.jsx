@@ -2,6 +2,10 @@ import { AppStoreButton, GooglePlayButton } from './StoreButtons';
 
 const HERO_BG = '/images/hero-bg.jpg';
 
+/** Telefon mockup içi — 9:19 dikey görsel önerilir (public/images/phone-screen.jpg) */
+const PHONE_SCREEN_IMAGE = '/images/phone-screen.jpg';
+const PHONE_SCREEN_ALT = 'X Games Studio — oyun ekranı önizlemesi';
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-studio-light dark:bg-studio-night">
@@ -56,34 +60,34 @@ function PhoneMockup() {
   return (
     <div className="relative w-[280px] sm:w-[300px]">
       <div className="absolute -inset-8 rounded-full bg-studio-accent/20 blur-3xl dark:bg-studio-accent/10" />
+
       <div className="relative rounded-[2.5rem] border-[6px] border-gray-800 bg-gray-900 p-2 shadow-2xl dark:border-gray-600">
-        <div className="absolute left-1/2 top-3 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-gray-800 dark:bg-gray-700" />
-        <div className="relative aspect-[9/19] overflow-hidden rounded-[2rem] bg-gradient-to-br from-indigo-950 via-purple-900 to-studio-night">
-          <div className="absolute inset-0 opacity-40">
-            <div className="absolute left-4 top-8 h-2 w-16 rounded-full bg-cyan-400/60" />
-            <div className="absolute right-6 top-12 h-3 w-3 rounded-full bg-pink-400 shadow-[0_0_12px_#f472b6]" />
-            <div className="absolute left-8 top-24 h-2 w-10 rounded-full bg-violet-400/50" />
-            <div className="absolute bottom-32 left-1/2 h-16 w-16 -translate-x-1/2 rounded-lg border border-cyan-400/40 bg-cyan-500/10 backdrop-blur-sm" />
-            <div className="absolute bottom-20 left-4 right-4 flex justify-between gap-2">
-              {[...Array(4)].map((_, i) => (
-                <div
-                  key={i}
-                  className="h-10 flex-1 rounded-lg border border-white/10 bg-white/5"
-                  style={{ animationDelay: `${i * 0.2}s` }}
-                />
-              ))}
-            </div>
-          </div>
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-16">
-            <p className="text-xs font-medium uppercase tracking-widest text-cyan-300">
+        {/* Dynamic Island */}
+        <div className="absolute left-1/2 top-3 z-20 h-5 w-24 -translate-x-1/2 rounded-full bg-gray-950/90 shadow-inner dark:bg-black/80" />
+
+        {/* Ekran alanı — görsel buraya object-cover ile oturur */}
+        <div className="relative aspect-[9/19] overflow-hidden rounded-[2rem] bg-gray-950">
+          <img
+            src={PHONE_SCREEN_IMAGE}
+            alt={PHONE_SCREEN_ALT}
+            className="absolute inset-0 h-full w-full object-cover object-center"
+            draggable={false}
+          />
+
+          {/* Kenarları yumuşat + hafif cam efekti */}
+          <div className="pointer-events-none absolute inset-0 rounded-[2rem] ring-1 ring-inset ring-white/10" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/50" />
+
+          {/* Alt bilgi şeridi */}
+          <div className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-black/85 via-black/50 to-transparent px-5 pb-5 pt-14">
+            <p className="text-[10px] font-semibold uppercase tracking-widest text-cyan-300/90">
               Now Playing
             </p>
-            <p className="mt-1 text-lg font-bold text-white">Shadow Run</p>
-            <div className="mt-3 h-1 overflow-hidden rounded-full bg-white/20">
+            <p className="mt-0.5 text-base font-bold text-white sm:text-lg">Shadow Run</p>
+            <div className="mt-2.5 h-1 overflow-hidden rounded-full bg-white/20">
               <div className="h-full w-2/3 rounded-full bg-gradient-to-r from-studio-accent to-cyan-400" />
             </div>
           </div>
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(99,102,241,0.4),transparent_50%)]" />
         </div>
       </div>
     </div>
