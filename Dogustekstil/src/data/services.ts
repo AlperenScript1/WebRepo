@@ -2,6 +2,14 @@ import { PrintService } from '@/types'
 
 export const printServices: PrintService[] = [
   {
+    id: 'kisisel-baski',
+    title: 'Kişiye Özel Baskı',
+    subtitle: 'Size Özel Üretim',
+    description: 'Logo, yazı veya görsellerinizi bize iletin. İstediğiniz tekstil ürününe profesyonel baskı uygulayarak size özel üretim gerçekleştirelim.',
+    icon: 'Palette',
+    highlight: 'Size Özel',
+  },
+  {
     id: 'dtf',
     title: 'DTF Baskı',
     subtitle: 'Direct to Film',
@@ -39,14 +47,6 @@ export const printServices: PrintService[] = [
     subtitle: 'Rulo Film Baskı',
     description: 'Rulo DTF film üzerine yüksek kaliteli dijital baskı üretimi. Canlı renkler, dayanıklı sonuçlar ve hızlı teslimat.',
     icon: 'Ruler',
-    highlight: 'Premium',
-  },
-  {
-    id: 'kisisel-baski',
-    title: 'Kişiye Özel Baskı',
-    subtitle: 'Size Özel Üretim',
-    description: 'Logo, yazı veya görsellerinizi bize iletin. İstediğiniz tekstil ürününe profesyonel baskı uygulayarak size özel üretim gerçekleştirelim.',
-    icon: 'Palette',
     highlight: 'Premium',
   },
   {

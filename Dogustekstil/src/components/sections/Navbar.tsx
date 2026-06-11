@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/Button'
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton'
 import { ThemeToggle } from '@/components/ui/ThemeToggle'
 import { Logo } from '@/components/ui/Logo'
+import { AnnouncementBar } from '@/components/ui/AnnouncementBar'
 import { NavLink } from '@/types'
 
 const navLinks: NavLink[] = [
@@ -37,6 +38,7 @@ export function Navbar() {
 
   return (
     <header className={navClasses}>
+      <AnnouncementBar />
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20 gap-4">
           <a href="#" className="flex items-center shrink-0">

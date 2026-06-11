@@ -18,7 +18,7 @@ const features: { icon: LucideIcon; label: string }[] = [
 export function HeroSection() {
   return (
     <section
-      className="min-h-screen flex flex-col items-center justify-center bg-brand-white hero-pattern px-4 sm:px-6 lg:px-8 pt-24 pb-16"
+      className="min-h-screen flex flex-col items-center justify-center bg-brand-white hero-pattern px-4 sm:px-6 lg:px-8 pt-32 md:pt-36 pb-16"
     >
       <div className="max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
         <Badge variant="red">📍 Ankara · Türkiye Geneli Gönderim</Badge>

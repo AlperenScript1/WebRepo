@@ -65,4 +65,24 @@
   .hero-pattern {
     background-image: var(--hero-pattern);
   }
+  .service-card-spotlight {
+    animation: service-spotlight 1s ease-out;
+  }
+}
+
+@keyframes service-spotlight {
+  0% {
+    box-shadow: 0 0 0 0 rgba(176, 30, 75, 0.55);
+    border-color: #B01E4B;
+    transform: scale(1);
+  }
+  35% {
+    box-shadow: 0 0 0 10px rgba(176, 30, 75, 0.15), 0 8px 32px rgba(176, 30, 75, 0.25);
+    border-color: #B01E4B;
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: var(--shadow-card);
+    transform: scale(1);
+  }
 }
