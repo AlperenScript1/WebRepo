@@ -1,0 +1,81 @@
+import { Product } from '@/types'
+
+export const products: Product[] = [
+  {
+    id: 'is-yelegi',
+    name: 'İş Yelegi',
+    description: 'Firmanıza özel logo baskılı, dayanıklı kumaştan üretilen iş yelekleri. Toplu siparişlerde özel fiyat.',
+    tags: ['Logo Baskılı', 'Toplu Üretim', 'Dayanıklı'],
+    icon: 'Shirt',
+  },
+  {
+    id: 'reflektorlu-yelek',
+    name: 'Reflektörlü Yelek',
+    description: 'Gece görünürlüğünü artıran reflektör şeritli güvenlik yelekleri. İş güvenliği standartlarına uygun.',
+    tags: ['Reflektör Baskı', 'İş Güvenliği', 'EN ISO 20471'],
+    icon: 'ShieldCheck',
+  },
+  {
+    id: 'personel-tisort',
+    name: 'Personel Tişörtü',
+    description: 'DTF ve serigrafi baskı seçenekleriyle firmanızın kimliğini taşıyan kaliteli personel tişörtleri.',
+    tags: ['DTF Baskı', 'Firmaya Özel', 'Serigrafi'],
+    icon: 'Shirt',
+  },
+  {
+    id: 'pamuk-tisort',
+    name: '%100 Pamuk Tişört',
+    description: 'Nefes alan %100 pamuk kumaştan üretilen tişörtler. Günlük kullanım ve kurumsal baskı için ideal konfor ve kalite.',
+    tags: ['%100 Pamuk', 'Logo Baskılı', 'Konforlu'],
+    icon: 'Shirt',
+  },
+  {
+    id: 'is-montu',
+    name: 'İş Montu',
+    description: 'Dört mevsim kullanıma uygun, güçlü kumaş yapısıyla iş montları. Toplu üretimde hızlı teslimat.',
+    tags: ['Dayanıklı Kumaş', 'Toplu Üretim', 'Hızlı Teslimat'],
+    icon: 'Wind',
+  },
+  {
+    id: 'sweatshirt',
+    name: 'Sweatshirt',
+    description: 'Konforlu ve şık sweatshirt\'ler. Baskı kalitesiyle uzun süre canlılığını korur.',
+    tags: ['Logo Baskılı', 'Konforlu', 'Flex-Flok'],
+    icon: 'Shirt',
+  },
+  {
+    id: 'polar',
+    name: 'Polar',
+    description: 'Soğuk iş ortamları için termal polar giysiler. Kurumsal logonuzla özel baskı imkânı.',
+    tags: ['Termal', 'Firmaya Özel', 'Kış Sezonu'],
+    icon: 'Snowflake',
+  },
+  {
+    id: 'sapka',
+    name: 'Şapka',
+    description: 'Nakış veya baskı logo seçeneğiyle kurumsal şapkalar. Promosyon ve personel hediyesi için ideal.',
+    tags: ['Nakış', 'Logo Baskılı', 'Promosyon'],
+    icon: 'HardHat',
+  },
+  {
+    id: 'onluk',
+    name: 'Önlük',
+    description: 'Restoran, fabrika ve kafe personeli için dayanıklı, logo baskılı önlükler.',
+    tags: ['Logo Baskılı', 'Dayanıklı', 'Gastronomi'],
+    icon: 'ChefHat',
+  },
+  {
+    id: 'guvenlik-kiyafeti',
+    name: 'Güvenlik Kıyafetleri',
+    description: 'Özel güvenlik personeli için profesyonel üniforma ve kıyafet çözümleri. Toplu siparişe uygun.',
+    tags: ['Üniforma', 'İş Güvenliği', 'Toplu Sipariş'],
+    icon: 'Shield',
+  },
+  {
+    id: 'kurumsal-giyim',
+    name: 'Kurumsal Personel Giyim',
+    description: 'Tek noktadan tüm kurumsal giyim ihtiyacınız. Firmaya özel tasarım ve toplu üretim paketi.',
+    tags: ['Firmaya Özel Tasarım', 'Paket Çözüm', 'Kurumsal'],
+    icon: 'Building2',
+  },
+]

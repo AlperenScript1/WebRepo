@@ -1,0 +1,60 @@
+import { PrintService } from '@/types'
+
+export const printServices: PrintService[] = [
+  {
+    id: 'dtf',
+    title: 'DTF Baskı',
+    subtitle: 'Direct to Film',
+    description: 'Canlı renkler ve yıkamaya karşı son derece dayanıklı baskı teknolojisi. Her renk ve deseni mükemmel şekilde yansıtır.',
+    icon: 'Printer',
+    highlight: 'En Popüler',
+  },
+  {
+    id: 'fason-dtf',
+    title: 'Fason DTF Baskı',
+    subtitle: 'Toplu Üretim Desteği',
+    description: 'Markalara ve işletmelere toplu DTF baskı üretim desteği. Kendi kumaşınızı getirin, biz baskıyı yapalım.',
+    icon: 'Factory',
+    highlight: 'Büyük Adet',
+  },
+  {
+    id: 'reflektor',
+    title: 'Reflektör Baskı',
+    subtitle: 'Gece Görünürlüğü',
+    description: 'Karanlıkta ışığı yansıtarak maksimum güvenlik sağlayan özel reflektör baskı teknolojisi. İş güvenliği standartlarına uygundur.',
+    icon: 'Flashlight',
+    highlight: 'İş Güvenliği',
+  },
+  {
+    id: 'flex-flok',
+    title: 'Flex-Flok Baskı',
+    subtitle: 'Premium Görünüm',
+    description: 'Kadifemsi dokusu ve premium estetiğiyle öne çıkan baskı türü. Spor giyim ve prestijli kurumsal giyimde tercih edilir.',
+    icon: 'Layers',
+    highlight: 'Premium',
+  },
+  {
+    id: 'dtf-metraj',
+    title: 'DTF Metraj Baskı',
+    subtitle: 'Rulo Film Baskı',
+    description: 'Rulo DTF film üzerine yüksek kaliteli dijital baskı üretimi. Canlı renkler, dayanıklı sonuçlar ve hızlı teslimat.',
+    icon: 'Ruler',
+    highlight: 'Premium',
+  },
+  {
+    id: 'kisisel-baski',
+    title: 'Kişiye Özel Baskı',
+    subtitle: 'Size Özel Üretim',
+    description: 'Logo, yazı veya görsellerinizi bize iletin. İstediğiniz tekstil ürününe profesyonel baskı uygulayarak size özel üretim gerçekleştirelim.',
+    icon: 'Palette',
+    highlight: 'Premium',
+  },
+  {
+    id: 'serigrafi',
+    title: 'Serigrafi Baskı',
+    subtitle: 'Ekonomik & Yüksek Adet',
+    description: 'Yüksek adetli üretimler için en ekonomik çözüm. Güçlü ve uzun ömürlü baskı kalitesiyle sektörün tercihi.',
+    icon: 'Grid',
+    highlight: 'Ekonomik',
+  },
+]

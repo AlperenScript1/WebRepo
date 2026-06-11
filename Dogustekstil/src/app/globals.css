@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-black: #1a1a1a;
+  --brand-dark: #f5f5f5;
+  --brand-gray: #ffffff;
+  --brand-gray-m: #eeeeee;
+  --brand-smoke: #e0e0e0;
+  --brand-muted: #555555;
+  --brand-light: #333333;
+  --brand-white: #ffffff;
+  --shadow-card: 0 4px 24px rgba(176, 30, 75, 0.08);
+  --shadow-nav: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --hero-pattern: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 40px,
+    rgba(176, 30, 75, 0.04) 40px,
+    rgba(176, 30, 75, 0.04) 41px
+  );
+}
+
+.dark {
+  --brand-black: #ffffff;
+  --brand-dark: #141414;
+  --brand-gray: #1f1f1f;
+  --brand-gray-m: #2a2a2a;
+  --brand-smoke: #3d3d3d;
+  --brand-muted: #737373;
+  --brand-light: #f5f5f5;
+  --brand-white: #0a0a0a;
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.35);
+  --shadow-nav: 0 4px 20px rgba(0, 0, 0, 0.45);
+  --hero-pattern: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 40px,
+    rgba(176, 30, 75, 0.07) 40px,
+    rgba(176, 30, 75, 0.07) 41px
+  );
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-brand-white text-brand-black font-body antialiased transition-colors duration-300;
+  }
+  ::selection { @apply bg-brand-red text-white; }
+}
+
+@layer utilities {
+  .accent-line {
+    @apply w-12 h-1 bg-brand-red rounded-full;
+  }
+  .section-title {
+    @apply font-display font-800 text-4xl md:text-5xl uppercase tracking-tight text-brand-black;
+  }
+  .card-base {
+    @apply bg-brand-gray border border-brand-smoke rounded-2xl p-6 shadow-card
+           hover:border-brand-red transition-colors duration-300;
+  }
+  .hero-pattern {
+    background-image: var(--hero-pattern);
+  }
+}
