@@ -72,6 +72,20 @@ export const products: Product[] = [
     icon: 'Shield',
   },
   {
+    id: 'dtf-metraj-baski',
+    name: 'DTF Metraj Baskı',
+    description: 'Rulo DTF film üzerine yüksek kaliteli dijital baskı üretimi. Canlı renkler, dayanıklı sonuçlar ve hızlı teslimat.',
+    tags: ['Premium', 'DTF Baskı', 'Rulo Film'],
+    icon: 'Ruler',
+  },
+  {
+    id: 'kisisel-baski',
+    name: 'Kişiye Özel Baskı',
+    description: 'Logo, yazı veya görsellerinizi bize iletin. İstediğiniz tekstil ürününe profesyonel baskı uygulayarak size özel üretim gerçekleştirelim.',
+    tags: ['Premium', 'Firmaya Özel', 'Logo Baskılı'],
+    icon: 'Palette',
+  },
+  {
     id: 'kurumsal-giyim',
     name: 'Kurumsal Personel Giyim',
     description: 'Tek noktadan tüm kurumsal giyim ihtiyacınız. Firmaya özel tasarım ve toplu üretim paketi.',

@@ -7,7 +7,7 @@ export const printServices: PrintService[] = [
     subtitle: 'Size Özel Üretim',
     description: 'Logo, yazı veya görsellerinizi bize iletin. İstediğiniz tekstil ürününe profesyonel baskı uygulayarak size özel üretim gerçekleştirelim.',
     icon: 'Palette',
-    highlight: 'Size Özel',
+    highlight: 'Premium',
   },
   {
     id: 'dtf',

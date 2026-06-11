@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import {
-  Shirt, ShieldCheck, Wind, Snowflake, HardHat, ChefHat, Shield, Building2, type LucideIcon,
+  Shirt, ShieldCheck, Wind, Snowflake, HardHat, ChefHat, Shield, Building2, Ruler, Palette, type LucideIcon,
 } from 'lucide-react'
 import { products } from '@/data/products'
 import { SectionHeader } from '@/components/ui/SectionHeader'
@@ -11,7 +11,7 @@ import { Badge } from '@/components/ui/Badge'
 const filters = ['Tümü', 'Logo Baskılı', 'İş Güvenliği', 'Toplu Üretim', 'Dayanıklı', 'Premium']
 
 const iconMap: Record<string, LucideIcon> = {
-  Shirt, ShieldCheck, Wind, Snowflake, HardHat, ChefHat, Shield, Building2,
+  Shirt, ShieldCheck, Wind, Snowflake, HardHat, ChefHat, Shield, Building2, Ruler, Palette,
 }
 
 export function ProductsSection() {
