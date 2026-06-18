@@ -23,6 +23,7 @@ export function HeroSection() {
       <div className="max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
         <Badge variant="red">📍 Ankara · Türkiye Geneli Gönderim</Badge>
         <h1 className="font-display font-800 uppercase tracking-tight leading-none">
+          <span className="block text-4xl sm:text-5xl md:text-7xl text-brand-red">DOĞUŞ TEKSTİL</span>
           <span className="block text-5xl sm:text-6xl md:text-8xl text-brand-black">PROFESYONEL</span>
           <span className="block text-5xl sm:text-6xl md:text-8xl text-brand-red">TEKSTİL BASKI</span>
           <span className="block text-5xl sm:text-6xl md:text-8xl text-brand-black">HİZMETLERİ</span>

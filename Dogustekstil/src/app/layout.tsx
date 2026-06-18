@@ -1,17 +1,59 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { ThemeProvider } from '@/components/ui/ThemeProvider'
+import { JsonLd } from '@/components/seo/JsonLd'
+import { siteConfig, getSiteUrl } from '@/lib/site'
+
+const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
 
 export const metadata: Metadata = {
-  title: 'Doğuş Tekstil — Ankara Profesyonel Tekstil Baskı Hizmetleri',
-  description: 'Ankara\'da DTF, reflektör, flex-flok ve serigrafi baskı hizmetleri. Firma logolu toplu üretim, personel giyim çözümleri. +90 541 198 20 04',
-  keywords: 'DTF baskı Ankara, tekstil baskı, iş yelegi, firma logolu üretim, reflektör baskı, serigrafi',
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  keywords: [...siteConfig.keywords],
+  applicationName: siteConfig.name,
+  authors: [{ name: siteConfig.name, url: getSiteUrl() }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
+  category: 'Tekstil Baskı',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+  alternates: {
+    canonical: getSiteUrl('/'),
+  },
   openGraph: {
-    title: 'Doğuş Tekstil — Ankara Tekstil Baskı',
-    description: 'Profesyonel tekstil baskı çözümleri',
-    locale: 'tr_TR',
     type: 'website',
-    images: [{ url: '/jlogo.png', alt: 'Doğuş Tekstil Logo' }],
+    locale: siteConfig.locale,
+    url: getSiteUrl('/'),
+    siteName: siteConfig.name,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 512,
+        height: 512,
+        alt: `${siteConfig.name} — Ankara tekstil baskı`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.title,
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
   },
   icons: {
     icon: [
@@ -21,6 +63,9 @@ export const metadata: Metadata = {
     shortcut: '/favicon-32.png',
     apple: '/jlogo.png',
   },
+  ...(googleVerification
+    ? { verification: { google: googleVerification } }
+    : {}),
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -35,6 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        <JsonLd />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
